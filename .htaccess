@@ -1,0 +1,21 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php
+RewriteRule ^connexion$ index.php?path=login
+RewriteRule ^logout$ index.php?path=logout
+
+#ADMINISTRATION LINK REWRITERULE
+
+RewriteRule ^administration$ index.php?path=dashboard
+RewriteRule ^administration/languages$ index.php?path=dashboard&page=pageContentLanguages
+RewriteRule ^administration/options$ index.php?path=dashboard&page=pageContentOptions
+RewriteRule ^administration/projects$ index.php?path=dashboard&page=pageContentProjects
+RewriteRule ^administration/pageNewProject$ index.php?path=dashboard&page=pageNewProject
+RewriteRule ^administration/pageListProjects$ index.php?path=dashboard&page=pageListProjects
+RewriteRule ^administration/pageNewLanguage$ index.php?path=dashboard&page=pageNewLanguage
+RewriteRule ^administration/pageListLanguages$ index.php?path=dashboard&page=pageListLanguages
+
+#AJAX REWRITERULE
+
+RewriteRule ^administration/newProject$ index.php?path=dashboard&data=newProject
+RewriteRule ^administration/newLanguage$ index.php?path=dashboard&data=newLanguage
